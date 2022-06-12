@@ -24,6 +24,20 @@ import java.util.Scanner;
  * and open the template in the editor.
  */
 /**
+ * Se tiene el fichero binario seguros.bin, con los siguientes campos:
+ Dni, Edad, Matricula y Seguro.
+ Se pide hacer un programa que actualice dicho fichero según el valor del seguro.
+ Las condiciones son:
+• Si el seguro es 0, se le asignará el 20% del precio para aquellos propietarios
+que tengan menos de 40 años y el 10% para el resto.
+ El valor del precio es igual para todos y se pedirá por teclado.
+• Si el seguro es menor de 500, este se incrementará en un 5%
+• Si esta entre 500 y 1000, se quedara igual.
+• Si es mayor de 1000 se dará de baja.
+Finalmente, se escribirá en pantalla el fichero actualizado y se indicará a cuantas
+personas se ha dado de baja.
+No se pueden utilizar otras estructuras que no sean ficheros, para realizar la
+actualización.
  *
  * @author Morad
  */
@@ -63,7 +77,7 @@ public class Main {
             dis.close();
             fis.close();
 
-            fis = new FileInputStream(f1);
+            fis = new FileInputStream(f);
             dis = new DataInputStream(fis);
             //escribimos
             FileOutputStream fos = new FileOutputStream(f1);
